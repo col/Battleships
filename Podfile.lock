@@ -1,0 +1,15 @@
+PODS:
+  - Birdsong (0.5.0):
+    - Starscream (= 2.0.1)
+  - Starscream (2.0.1)
+
+DEPENDENCIES:
+  - Birdsong (~> 0.5)
+
+SPEC CHECKSUMS:
+  Birdsong: f5750930e81ae598d8b8e1359861e405fa508cae
+  Starscream: ce7a202d95615bd4113bc5a0f1932f1db8c808a4
+
+PODFILE CHECKSUM: d7690224c9b84ffc8df813c2b3bd92581305904d
+
+COCOAPODS: 1.1.1
