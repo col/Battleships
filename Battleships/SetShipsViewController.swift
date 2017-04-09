@@ -50,7 +50,7 @@ class SetShipsViewController: UIViewController, GridViewDelegate {
     @IBAction
     func setShips() {
         gameChannel.setShip(ship: "aircraft_carrier", coordinates: ["a1", "b1", "c1", "d1", "e1"])
-        gameChannel.setShip(ship: "batteship", coordinates: ["a2", "b2", "c2", "d2"])
+        gameChannel.setShip(ship: "battleship", coordinates: ["a2", "b2", "c2", "d2"])
         gameChannel.setShip(ship: "cruiser", coordinates: ["a3", "b3", "c3"])
         gameChannel.setShip(ship: "submarine", coordinates: ["a4", "b4", "c4"])
         gameChannel.setShip(ship: "destroyer", coordinates: ["a5", "b5"])

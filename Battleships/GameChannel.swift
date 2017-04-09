@@ -17,7 +17,7 @@ protocol GameChannelDelegate {
 class GameChannel {
     
     let socket: Socket
-    var channel: Channel?
+    var channel: Channel!
     
     let player: String
     
@@ -26,7 +26,7 @@ class GameChannel {
     init(socket: Socket, name: String, player: String) {
         self.socket = socket
         self.player = player
-        let channel = self.socket.channel(name, payload: [:])
+        channel = self.socket.channel(name, payload: [:])
             
         channel.on("player_added", callback: { message in
             print("Player added!")
@@ -39,12 +39,13 @@ class GameChannel {
         })
         
         channel.join()?.receive("ok", callback: { payload in
-            print("Successfully joined: \(channel.topic)")
+            print("Successfully joined: \(self.channel.topic)")
         })
     }
     
     func guessCoordinate(coordinate: String) {
-        channel?.send("guess_coordinate", payload: ["player": player, "coordinate": coordinate])?
+        print("guess_coordinate - \(["player": player, "coordinate": coordinate])")
+        channel.send("guess_coordinate", payload: ["player": player, "coordinate": coordinate])?
             .receive("ok", callback: { (response) in
                 print("response = \(response)")
             })
@@ -54,7 +55,7 @@ class GameChannel {
     }
     
     func setShip(ship: String, coordinates: [String]) {
-        channel?.send("set_ship_coordinates", payload: ["player": player, "ship": ship, "coordinates": coordinates])?
+        channel.send("set_ship_coordinates", payload: ["player": player, "ship": ship, "coordinates": coordinates])?
             .receive("ok", callback: { (response) in
                 print("response = \(response)")
             })
@@ -64,7 +65,7 @@ class GameChannel {
     }
     
     func setShips(player: String) {
-        channel?.send("set_ships", payload: ["player": player])?
+        channel.send("set_ships", payload: ["player": player])?
             .receive("ok", callback: { (response) in
                 print("response = \(response)")
             })
