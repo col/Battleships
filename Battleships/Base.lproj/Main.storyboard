@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MJK-qt-Lnr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,26 +14,26 @@
         <scene sceneID="bMH-un-Azn">
             <objects>
                 <collectionViewController id="zut-X0-qWC" customClass="GridViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gat-0t-iBz">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Gat-0t-iBz">
+                        <rect key="frame" x="0.0" y="0.0" width="303" height="303"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ExR-4A-Wlm">
-                            <size key="itemSize" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="3" id="ExR-4A-Wlm">
+                            <size key="itemSize" width="27" height="27"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                            <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="57o-cz-q0U" customClass="GridCell" customModule="Battleships" customModuleProvider="target">
-                                <rect key="frame" x="2" y="2" width="30" height="30"/>
+                                <rect key="frame" x="3" y="3" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y51-8e-EjT">
-                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </view>
                                     </subviews>
@@ -54,12 +54,197 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJF-zY-Gt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.5999999999999" y="40.479760119940032"/>
+            <point key="canvasLocation" x="2377" y="755"/>
         </scene>
-        <!--View Controller-->
+        <!--Grid View Controller-->
+        <scene sceneID="WDf-j7-geC">
+            <objects>
+                <collectionViewController id="gk9-eK-lVV" customClass="GridViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="TfN-tK-8Q8">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="202"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="YXj-tE-ufr">
+                            <size key="itemSize" width="18" height="18"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="s5x-2o-t9V" customClass="GridCell" customModule="Battleships" customModuleProvider="target">
+                                <rect key="frame" x="2" y="2" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHS-Bx-pjo">
+                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="qHS-Bx-pjo" secondAttribute="trailing" constant="-8" id="I3g-0k-ncg"/>
+                                    <constraint firstItem="qHS-Bx-pjo" firstAttribute="leading" secondItem="s5x-2o-t9V" secondAttribute="leadingMargin" constant="-8" id="jxX-PF-523"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="qHS-Bx-pjo" secondAttribute="bottom" constant="-8" id="mLM-cU-vNF"/>
+                                    <constraint firstItem="qHS-Bx-pjo" firstAttribute="top" secondItem="s5x-2o-t9V" secondAttribute="topMargin" constant="-8" id="sMx-Gq-5bv"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gk9-eK-lVV" id="ElD-pw-YEq"/>
+                            <outlet property="delegate" destination="gk9-eK-lVV" id="VQR-0C-KF5"/>
+                        </connections>
+                    </collectionView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="202" height="202"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjl-7w-zLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913.5999999999999" y="753.82308845577222"/>
+        </scene>
+        <!--Set Ships-->
+        <scene sceneID="ZiH-x0-eBg">
+            <objects>
+                <viewController storyboardIdentifier="SetShips" id="Xhg-wM-bTe" customClass="SetShipsViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N0n-KN-J6K"/>
+                        <viewControllerLayoutGuide type="bottom" id="969-Lk-7o4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7pR-Xp-qVj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLp-Ev-AKP">
+                                <rect key="frame" x="36" y="72" width="303" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="ONx-IC-EJz"/>
+                                    <constraint firstAttribute="height" constant="303" id="cyH-IO-ljj"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="zut-X0-qWC" kind="embed" id="jd6-l3-iLK"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbW-Kb-kQM">
+                                <rect key="frame" x="87" y="383" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Cxu-bG-HII"/>
+                                    <constraint firstAttribute="height" constant="30" id="kPj-la-8ZS"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="setShips" destination="Xhg-wM-bTe" eventType="touchUpInside" id="7tC-GP-ltd"/>
+                                    <action selector="setShips" destination="uOh-2I-Wic" eventType="touchUpInside" id="myY-oH-4Jq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mbW-Kb-kQM" firstAttribute="centerX" secondItem="7pR-Xp-qVj" secondAttribute="centerX" id="5Yl-nj-gu7"/>
+                            <constraint firstItem="kLp-Ev-AKP" firstAttribute="top" secondItem="N0n-KN-J6K" secondAttribute="bottom" constant="8" symbolic="YES" id="Vcn-80-rFM"/>
+                            <constraint firstItem="kLp-Ev-AKP" firstAttribute="centerX" secondItem="7pR-Xp-qVj" secondAttribute="centerX" id="fpv-sb-NFx"/>
+                            <constraint firstItem="mbW-Kb-kQM" firstAttribute="top" secondItem="kLp-Ev-AKP" secondAttribute="bottom" constant="8" id="zny-pt-tRt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Ships" id="pw9-vt-RH2"/>
+                    <connections>
+                        <outlet property="gridView" destination="kLp-Ev-AKP" id="fvT-eB-exe"/>
+                        <segue destination="uOh-2I-Wic" kind="show" identifier="Game" id="SXi-9w-vWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOF-cX-HIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="137"/>
+        </scene>
+        <!--New Game-->
+        <scene sceneID="DJN-oP-XeV">
+            <objects>
+                <viewController id="rDf-tN-ywF" customClass="NewGameViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCz-1k-Bzy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ct3-3B-69G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LHx-1Y-Nlp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Battleships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-mY-box">
+                                <rect key="frame" x="144" y="72" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sig-qE-aFa">
+                                <rect key="frame" x="62" y="180" width="251" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rDf-tN-ywF" id="lrA-Vo-N1r"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-xK-YYd">
+                                <rect key="frame" x="156" y="218" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueClicked" destination="rDf-tN-ywF" eventType="touchUpInside" id="voZ-vT-RBs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="75o-bb-MSa"/>
+                    <connections>
+                        <outlet property="playerNameField" destination="sig-qE-aFa" id="Uof-Et-l7V"/>
+                        <segue destination="7Dc-Ig-b3G" kind="show" identifier="AwaitingPlayer" id="WYt-jW-JbV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGj-r9-cPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="-580.65967016491754"/>
+        </scene>
+        <!--Awaiting Player-->
+        <scene sceneID="M3K-v3-pn2">
+            <objects>
+                <viewController id="7Dc-Ig-b3G" customClass="AwaitingPlayerViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SLk-qH-XYJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="quA-HE-GXH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8b-V3-VhS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Waiting for player to join..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlJ-kJ-j3z">
+                                <rect key="frame" x="88" y="72" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Awaiting Player" id="CBg-14-vAR"/>
+                    <connections>
+                        <segue destination="Xhg-wM-bTe" kind="show" identifier="SetShips" id="sXc-pE-UQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSn-zs-NKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-576"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -69,36 +254,111 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgO-Po-fI1">
-                                <rect key="frame" x="150" y="318" width="75" height="30"/>
+                                <rect key="frame" x="87" y="100.5" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9IX-Bd-OjP"/>
+                                    <constraint firstAttribute="width" constant="200" id="fWl-3I-5xQ"/>
+                                </constraints>
                                 <state key="normal" title="New Game"/>
                                 <connections>
-                                    <segue destination="uOh-2I-Wic" kind="show" id="gw4-AJ-LYi"/>
+                                    <segue destination="rDf-tN-ywF" kind="show" identifier="NewGame" id="SqD-Wx-bLI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battleships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-Hv-Mfm">
-                                <rect key="frame" x="144" y="28" width="86" height="21"/>
+                                <rect key="frame" x="144" y="72" width="86" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-7R-I0I">
+                                <rect key="frame" x="87" y="138" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6GH-pm-Wyt"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yxa-hs-Ef4"/>
+                                </constraints>
+                                <state key="normal" title="Join Game"/>
+                                <connections>
+                                    <segue destination="mYG-xg-ZTz" kind="show" identifier="JoinGame" id="gR7-xO-m80"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iQc-7R-I0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Tp-si-6hf"/>
                             <constraint firstItem="5Wy-Hv-Mfm" firstAttribute="centerX" secondItem="hgO-Po-fI1" secondAttribute="centerX" id="FeI-Fz-30N"/>
                             <constraint firstItem="5Wy-Hv-Mfm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NL6-zO-FN5"/>
+                            <constraint firstItem="hgO-Po-fI1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOk-QJ-hEk"/>
                             <constraint firstItem="5Wy-Hv-Mfm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V18-Gj-idw"/>
-                            <constraint firstItem="hgO-Po-fI1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ww7-Wk-ge1"/>
+                            <constraint firstItem="hgO-Po-fI1" firstAttribute="top" secondItem="5Wy-Hv-Mfm" secondAttribute="bottom" constant="8" id="aV9-s2-7dJ"/>
+                            <constraint firstItem="iQc-7R-I0I" firstAttribute="top" secondItem="hgO-Po-fI1" secondAttribute="bottom" constant="7.5" id="aaW-oX-awD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="k4t-eu-WXG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Join Game View Controller-->
+        <scene sceneID="dx4-6n-sYo">
+            <objects>
+                <tableViewController id="mYG-xg-ZTz" customClass="JoinGameViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Mu-pp-ROK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="UVT-zw-OxT" style="IBUITableViewCellStyleDefault" id="Zub-Yi-Owu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zub-Yi-Owu" id="h8c-tf-1QV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UVT-zw-OxT">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mYG-xg-ZTz" id="SE5-vO-Ngb"/>
+                            <outlet property="delegate" destination="mYG-xg-ZTz" id="pPI-uK-fcH"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Xhg-wM-bTe" kind="show" identifier="SetShips" id="P6F-0t-dsy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hac-FD-3eE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="865.81709145427294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CPB-Mj-hHy">
+            <objects>
+                <navigationController id="MJK-qt-Lnr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xUU-fX-q9b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Z4-0v-hqQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw3-aU-e7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="137"/>
+        </scene>
+        <!--Battleships-->
         <scene sceneID="XMH-hI-FUS">
             <objects>
-                <viewController id="uOh-2I-Wic" customClass="GameViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" title="Battleships" id="uOh-2I-Wic" customClass="GameViewController" customModule="Battleships" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HlR-An-YA1"/>
                         <viewControllerLayoutGuide type="bottom" id="5mb-Kx-efv"/>
@@ -107,16 +367,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-W2-a8l">
-                                <rect key="frame" x="144" y="28" width="87" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponents Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-W2-a8l">
+                                <rect key="frame" x="126" y="72" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU1-IZ-0Sg">
-                                <rect key="frame" x="37" y="57" width="300" height="300"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGS-Fx-Cit">
+                                <rect key="frame" x="151" y="412" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU1-IZ-0Sg">
+                                <rect key="frame" x="36" y="101" width="303" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="4oJ-Dy-1az"/>
+                                    <constraint firstAttribute="height" constant="303" id="uvc-1p-fee"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="zut-X0-qWC" kind="embed" id="4lW-2x-1lg"/>
+                                    <segue destination="zut-X0-qWC" kind="embed" identifier="Grid" id="4lW-2x-1lg"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfo-Di-1N4">
+                                <rect key="frame" x="86" y="441" width="202" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="ScI-Yg-uSn"/>
+                                    <constraint firstAttribute="width" constant="202" id="hYn-t1-6Lq"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="gk9-eK-lVV" kind="embed" identifier="SmallGrid" id="COv-ed-nGB"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -124,16 +404,25 @@
                         <constraints>
                             <constraint firstItem="kM8-W2-a8l" firstAttribute="centerX" secondItem="5qH-j9-OTo" secondAttribute="centerX" id="AsB-Pn-N42"/>
                             <constraint firstItem="TU1-IZ-0Sg" firstAttribute="centerX" secondItem="kM8-W2-a8l" secondAttribute="centerX" id="Ghi-VN-UzF"/>
+                            <constraint firstItem="RGS-Fx-Cit" firstAttribute="top" secondItem="TU1-IZ-0Sg" secondAttribute="bottom" constant="8" id="Inx-An-gko"/>
                             <constraint firstItem="kM8-W2-a8l" firstAttribute="top" secondItem="HlR-An-YA1" secondAttribute="bottom" constant="8" symbolic="YES" id="Sz1-vq-vjX"/>
-                            <constraint firstItem="TU1-IZ-0Sg" firstAttribute="leading" secondItem="5qH-j9-OTo" secondAttribute="leadingMargin" constant="21" id="XTR-c2-9LM"/>
-                            <constraint firstItem="5mb-Kx-efv" firstAttribute="top" secondItem="TU1-IZ-0Sg" secondAttribute="bottom" constant="310" id="mKD-Lc-D5y"/>
+                            <constraint firstItem="mfo-Di-1N4" firstAttribute="centerX" secondItem="5qH-j9-OTo" secondAttribute="centerX" id="Ytf-q0-1o5"/>
+                            <constraint firstItem="mfo-Di-1N4" firstAttribute="top" secondItem="RGS-Fx-Cit" secondAttribute="bottom" constant="8" id="nGc-ll-o0I"/>
                             <constraint firstItem="TU1-IZ-0Sg" firstAttribute="top" secondItem="kM8-W2-a8l" secondAttribute="bottom" constant="8" symbolic="YES" id="qwk-YH-CRO"/>
+                            <constraint firstItem="RGS-Fx-Cit" firstAttribute="centerX" secondItem="5qH-j9-OTo" secondAttribute="centerX" id="wCh-h9-Pg1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="TU1-IZ-0Sg" id="siN-sP-fbv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDd-An-3Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="136"/>
+            <point key="canvasLocation" x="2418" y="137"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4lW-2x-1lg"/>
+        <segue reference="P6F-0t-dsy"/>
+    </inferredMetricsTieBreakers>
 </document>

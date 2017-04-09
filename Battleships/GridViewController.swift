@@ -8,9 +8,19 @@
 
 import UIKit
 
+protocol GridViewDelegate {
+    func gridView(didSelectCoordinate coordinate:String)
+}
+
 class GridViewController: UICollectionViewController {
     
     let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    
+    var delegate: GridViewDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -41,10 +51,14 @@ class GridViewController: UICollectionViewController {
         let decodedIndexPath = indexPathForCoordinate(coordinate)
         print("didSelectItemAt: \(indexPath), coordinate: \(coordinate), decodedIndexPath: \(decodedIndexPath)")
         displayShipAt(indexPath: indexPath)
+        
+        delegate?.gridView(didSelectCoordinate: coordinate)
     }
     
     func displayShipAt(indexPath: IndexPath) {
-        let view = UIView(frame: collectionView(collectionView!, cellForItemAt: indexPath).frame)
+        let frame = collectionView(collectionView!, cellForItemAt: indexPath).frame
+        print("frame = \(frame)")
+        let view = UIView(frame: frame)
         view.backgroundColor = UIColor.red
         self.view.addSubview(view)
     }
