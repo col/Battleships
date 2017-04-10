@@ -10,5 +10,6 @@ import UIKit
 
 class GridCell: UICollectionViewCell {
     
+    @IBOutlet var imageView: UIImageView?
     
 }

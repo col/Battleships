@@ -43,14 +43,17 @@ class GameChannel {
         })
     }
     
-    func guessCoordinate(coordinate: String) {
+    func guessCoordinate(coordinate: String, callback: @escaping ([String:String]?) -> Void) {
         print("guess_coordinate - \(["player": player, "coordinate": coordinate])")
         channel.send("guess_coordinate", payload: ["player": player, "coordinate": coordinate])?
             .receive("ok", callback: { (response) in
                 print("response = \(response)")
+                let data = response["response"]
+                callback(data as? [String: String])
             })
             .receive("error", callback: { (response) in
                 print("error = \(response)")
+                callback(nil)
             })
     }
     

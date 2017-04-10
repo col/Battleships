@@ -11,11 +11,16 @@ import UIKit
 class ShipView: UIView {
     
     var touchDown: Bool = false
+    var imageView: UIImageView
     
     override init(frame: CGRect) {
+        imageView = UIImageView(image: UIImage(named: "battleship"))
         super.init(frame: frame)
         self.isMultipleTouchEnabled = true
-        self.backgroundColor = UIColor.black
+        self.contentMode = .scaleToFill
+        
+        imageView.frame = self.bounds
+        self.addSubview(imageView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,8 +43,8 @@ class ShipView: UIView {
         let gridPos = touches.first!.location(in: gridView())
         print("gridPos = \(gridPos)")
         
-        let xAdjust = (gridPos.x - 3).truncatingRemainder(dividingBy: 30)
-        let yAdjust = (gridPos.y - 3).truncatingRemainder(dividingBy: 30)
+        let xAdjust = (gridPos.x).truncatingRemainder(dividingBy: 30)
+        let yAdjust = (gridPos.y).truncatingRemainder(dividingBy: 30)
         print("xAdjust = \(xAdjust)")
         print("yAdjust = \(xAdjust)")
         

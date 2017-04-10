@@ -18,6 +18,8 @@ class GridViewController: UICollectionViewController {
     
     var delegate: GridViewDelegate?
     
+    var guesses: [String: String] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,6 +34,8 @@ class GridViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GridCell
+        let coordinate = coordinateForIndexPath(indexPath)
+        cell.imageView?.image = UIImage(named: guesses[coordinate] ?? "blank")
         return cell
     }
     
@@ -50,17 +54,12 @@ class GridViewController: UICollectionViewController {
         let coordinate = coordinateForIndexPath(indexPath)
         let decodedIndexPath = indexPathForCoordinate(coordinate)
         print("didSelectItemAt: \(indexPath), coordinate: \(coordinate), decodedIndexPath: \(decodedIndexPath)")
-        displayShipAt(indexPath: indexPath)
-        
         delegate?.gridView(didSelectCoordinate: coordinate)
     }
     
-    func displayShipAt(indexPath: IndexPath) {
-        let frame = collectionView(collectionView!, cellForItemAt: indexPath).frame
-        print("frame = \(frame)")
-        let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.red
-        self.view.addSubview(view)
+    func update(coordinate: String, state: String) {
+        guesses[coordinate] = state
+        collectionView?.reloadData()
     }
     
 }

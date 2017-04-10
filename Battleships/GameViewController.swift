@@ -27,7 +27,9 @@ class GameViewController: UIViewController, GridViewDelegate {
     }
     
     func gridView(didSelectCoordinate coordinate: String) {
-        gameChannel.guessCoordinate(coordinate: coordinate)
+        gameChannel.guessCoordinate(coordinate: coordinate) { response in
+            self.gridViewController.update(coordinate: coordinate, state: response?["hit"] ?? "blank")
+        }
     }
     
 }
